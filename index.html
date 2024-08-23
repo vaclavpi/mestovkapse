@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Město v kapse je inovativní průvodce českými městy, který vám pomůže objevit památky, restaurace, a mnoho dalšího. Staňte se součástí městského dobrodružství!">
+    <meta name="keywords" content="Město v kapse, česká města, průvodce, Václav Pisinger, aplikace, památky, restaurace, cestování, navigace, Česká republika">
+    <meta name="author" content="Město v kapse">
+    <meta property="og:title" content="Město v kapse - Váš osobní průvodce českými městy">
+    <meta property="og:description" content="Objevte kouzlo českých měst s aplikací Město v kapse. Navigujte se po památkách, objevujte nové restaurace a poznejte historii.">
+    <meta property="og:image" content="/logo.png">
+    <meta property="og:url" content="https://www.mestovkapse.cz">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Město v kapse - Váš osobní průvodce českými městy">
+    <meta name="twitter:description" content="Objevte kouzlo českých měst s aplikací Město v kapse. Navigujte se po památkách, objevujte nové restaurace a poznejte historii.">
+    <meta name="twitter:image" content="logo.png">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="cs">
+    <meta name="distribution" content="global">
+    <meta name="geo.region" content="CZ">
+    <meta name="geo.placename" content="Česká republika">
+
     <title>Město v kapse</title>
+    <link rel="icon" href="logo.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="logo.jpeg">
     <style>
+        /* CSS styling */
         body {
             font-family: 'Open Sans', sans-serif;
             background: linear-gradient(135deg, #e0f7fa, #f0faff);
@@ -101,7 +123,7 @@
 
         .pricing-panel {
             position: fixed;
-            right: -100%;
+            right: -400px;
             top: 0;
             height: 100%;
             width: 400px;
@@ -133,16 +155,24 @@
 
         .pricing-item h3 {
             color: #333333;
+            margin-bottom: 10px;
         }
 
         .pricing-item p {
             margin: 10px 0;
+            font-size: 14px;
         }
 
         .pricing-item .price {
             font-size: 24px;
             font-weight: bold;
             color: #007bff;
+        }
+
+        .pricing-item .icon {
+            font-size: 24px;
+            color: #007bff;
+            margin-right: 10px;
         }
 
         .close-btn {
@@ -191,7 +221,7 @@
 <body>
 
 <header>
-    <img src="logo.jpeg" alt="Logo aplikace">
+    <img src="logo.png" alt="Logo aplikace">
     <div>
         <h1>Město v kapse</h1>
         <p>Váš osobní průvodce českými městy</p>
@@ -206,7 +236,7 @@
     </div>
     <div class="divider"></div>
     <div class="buttons">
-        <a href="#" class="admin" onclick="togglePricingPanel()"><i class="fas fa-user-shield"></i> Vstup do admin panelu</a>
+        <a href="terms.html"><i class="fas fa-file-alt"></i> Podmínky používání</a>
         <a href="#" class="admin" onclick="togglePricingPanel()"><i class="fas fa-dollar-sign"></i> Zobrazit pricing list</a>
     </div>
 </div>
@@ -215,6 +245,7 @@
     <button class="close-btn" onclick="togglePricingPanel()">&times;</button>
     <h2>Pricing List</h2>
     <div class="pricing-item">
+        <i class="fas fa-briefcase icon"></i>
         <h3>Základní balíček</h3>
         <p>- Přidání až 10 míst</p>
         <p>- Základní administrace</p>
@@ -222,6 +253,7 @@
         <p class="price">199 Kč / měsíc</p>
     </div>
     <div class="pricing-item">
+        <i class="fas fa-cogs icon"></i>
         <h3>Pokročilý balíček</h3>
         <p>- Přidání až 50 míst</p>
         <p>- Pokročilá administrace</p>
@@ -230,6 +262,7 @@
         <p class="price">499 Kč / měsíc</p>
     </div>
     <div class="pricing-item">
+        <i class="fas fa-star icon"></i>
         <h3>Premium balíček</h3>
         <p>- Neomezený počet míst</p>
         <p>- Kompletní administrace</p>
@@ -240,7 +273,7 @@
 </div>
 
 <footer>
-    <p>&copy; 2024 Václav Pisinger. | <a href="https://vaclavpi.github.io/">Kontakt</a> | <a href="#">Podmínky používání</a></p>
+    <p>&copy; 2024 Václav Pisinger. | <a href="terms.html">Podmínky používání</a> | <a href="https://vaclavpi.github.io/">Kontakt</a></p>
 </footer>
 
 <script>
