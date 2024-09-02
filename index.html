@@ -3,285 +3,420 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Meta tags for SEO -->
-    <meta name="description" content="Město v kapse je inovativní průvodce českými městy, který vám pomůže objevit památky, restaurace, a mnoho dalšího. Staňte se součástí městského dobrodružství!">
-    <meta name="keywords" content="Město v kapse, česká města, průvodce, Václav Pisinger, aplikace, památky, restaurace, cestování, navigace, Česká republika">
+    <meta name="description" content="Město v kapse - Moderní guiding aplikace pro česká města.">
+    <meta name="keywords" content="guiding aplikace, města, ČR, mobilní aplikace, administrace">
     <meta name="author" content="Město v kapse">
-    <meta property="og:title" content="Město v kapse - Váš osobní průvodce českými městy">
-    <meta property="og:description" content="Objevte kouzlo českých měst s aplikací Město v kapse. Navigujte se po památkách, objevujte nové restaurace a poznejte historii.">
-    <meta property="og:image" content="/logo.png">
-    <meta property="og:url" content="https://www.mestovkapse.cz">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Město v kapse - Váš osobní průvodce českými městy">
-    <meta name="twitter:description" content="Objevte kouzlo českých měst s aplikací Město v kapse. Navigujte se po památkách, objevujte nové restaurace a poznejte historii.">
-    <meta name="twitter:image" content="logo.png">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="cs">
-    <meta name="distribution" content="global">
-    <meta name="geo.region" content="CZ">
-    <meta name="geo.placename" content="Česká republika">
-
     <title>Město v kapse</title>
-    <link rel="icon" href="logo.png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* CSS styling */
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, #e0f7fa, #f0faff);
-            color: #333333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            overflow-x: hidden;
-        }
-
-        header {
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        header img {
-            height: 50px;
-            margin-right: 15px;
-        }
-
-        header h1 {
-            font-family: 'Poppins', sans-serif;
-            color: #007bff;
-            margin: 0;
-        }
-
-        header p {
-            color: #666666;
-            margin: 0;
-            font-size: 14px;
-        }
-
-        .content {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .content p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-
-        .buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .buttons a {
-            display: inline-block;
-            padding: 15px 30px;
-            color: #ffffff;
-            background-color: #007bff;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 16px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .buttons a i {
-            margin-right: 8px;
-        }
-
-        .buttons a:hover {
-            background-color: #0056b3;
-            transform: translateY(-3px);
-        }
-
-        .buttons a.admin {
-            background-color: #e6f0ff;
-            color: #007bff;
-        }
-
-        .buttons a.admin:hover {
-            background-color: #d4e8ff;
-        }
-
-        .divider {
-            margin: 40px 0;
-            border-bottom: 1px solid #cccccc;
-        }
-
-        .pricing-panel {
-            position: fixed;
-            right: -1000px;
-            top: 0;
-            height: 100%;
-            width: 400px;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            transition: right 0.3s ease;
-            overflow-y: auto;
-            z-index: 1000;
-        }
-
-        .pricing-panel.active {
-            right: 0;
-        }
-
-        .pricing-panel h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-
-        .pricing-item {
-            background-color: rgba(240, 250, 255, 0.8);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .pricing-item h3 {
-            color: #333333;
-            margin-bottom: 10px;
-        }
-
-        .pricing-item p {
-            margin: 10px 0;
-            font-size: 14px;
-        }
-
-        .pricing-item .price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #007bff;
-        }
-
-        .pricing-item .icon {
-            font-size: 24px;
-            color: #007bff;
-            margin-right: 10px;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 18px;
-            cursor: pointer;
-            color: #007bff;
-            background-color: transparent;
-            border: none;
-        }
-
-        footer {
-            background-color: rgba(255, 255, 255, 0.8);
-            color: #333333;
-            padding: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            backdrop-filter: blur(10px);
-        }
-
-        footer a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .buttons a {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-
-            .pricing-panel {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="icon" href="logo.png">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logojmeno.png" alt="Logo Město v kapse">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">O aplikaci</a></li>
+            <li><a href="#features">Funkce</a></li>
+            <li><a href="#pricing">Ceník</a></li>
+            <li><a href="#news">Novinky</a></li>
+        </ul>
+        <a href="#admin-panel" class="btn-admin">Admin Panel</a>
+    </nav>
 
-<header>
-    <img src="logo.png" alt="Logo aplikace">
-    <div>
-        <h1>Město v kapse</h1>
-        <p>Váš osobní průvodce českými městy</p>
-    </div>
-</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Objevování měst</h1>
+            <h2>bez námahy</h2>
+            <p>Rychlé, snadné a přehledné informace o českých městech na dosah vašeho zařízení.</p>
+            <a href="#features" class="btn-main">Vstoupit</a>
+        </div>
+    </section>
 
-<div class="content">
-    <p>Objevte kouzlo českých měst s aplikací Město v kapse. Navigujte se po památkách, objevujte nové restaurace a poznejte historii.</p>
-    <div class="buttons">
-        <a href="#"><i class="fas fa-map-marked-alt"></i> Vstup do webové aplikace</a>
-        <a href="#"><i class="fas fa-download"></i> Stáhnout desktopovou aplikaci</a>
-    </div>
-    <div class="divider"></div>
-    <div class="buttons">
-        <a href="https://vaclavpi.github.io/mestovkapse_adminpanel_web/"><i class="fa-user"></i>Přejít do Admin Panelu</a>
-        <a href="#" class="admin" onclick="togglePricingPanel()"><i class="fas fa-dollar-sign"></i> Zobrazit pricing list</a>
-    </div>
-</div>
+    <!-- Statistics Section -->
+    <section class="statistics" id="statistics">
+        <div class="stat-item">
+            <div class="stat-icon">
+                <i class="fas fa-city"></i>
+            </div>
+            <p class="stat-number">2 města</p> 
+            <p class="stat-description">využívají systém Město v kapse pro poskytování aktuálních informací a doporučení.</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <p class="stat-number">2+ míst</p> 
+            <p class="stat-description">je zapsáno v naší databázi a Vy je můžete navštívit.</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">
+                <i class="fas fa-comments"></i>
+            </div>
+            <p class="stat-number">4.8 hvězdiček</p> 
+            <p class="stat-description">na platformách pro stahování, což odráží vysokou spokojenost uživatelů.</p>
+        </div>
+    </section>
 
-<div class="pricing-panel" id="pricingPanel">
-    <button class="close-btn" onclick="togglePricingPanel()">&times;</button>
-    <h2>Pricing List</h2>
-    <div class="pricing-item">
-        <i class="fas fa-briefcase icon"></i>
-        <h3>Základní balíček</h3>
-        <p>- Přidání až 10 míst</p>
-        <p>- Základní administrace</p>
-        <p>- Blogování</p>
-        <p class="price">199 Kč / měsíc</p>
-    </div>
-    <div class="pricing-item">
-        <i class="fas fa-cogs icon"></i>
-        <h3>Pokročilý balíček</h3>
-        <p>- Přidání až 50 míst</p>
-        <p>- Pokročilá administrace</p>
-        <p>- Analýza dat</p>
-        <p>- Podpora 24/7</p>
-        <p class="price">499 Kč / měsíc</p>
-    </div>
-    <div class="pricing-item">
-        <i class="fas fa-star icon"></i>
-        <h3>Premium balíček</h3>
-        <p>- Neomezený počet míst</p>
-        <p>- Kompletní administrace</p>
-        <p>- Rozšířené funkce blogování</p>
-        <p>- VIP podpora</p>
-        <p class="price">999 Kč / měsíc</p>
-    </div>
-</div>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-item">
+            <img src="hero-banner.jpg" alt="Webová aplikace" class="about-img">
+            <div class="about-text">
+                <h2>Webová aplikace</h2>
+                <h3>Město v kapse</h3>
+                <p>Naše webová aplikace vám umožní objevovat česká města bez nutnosti instalace. Je dostupná odkudkoliv, efektivní a snadno použitelná.</p>
+                <ul class="custom-colored-list">
+                    <li>Bez nutnosti instalace</li>
+                    <li>Efektivní použití</li>
+                    <li>Přístup odkudkoliv</li>
+                </ul>
+                <a href="#more-info-web" class="btn-more">Více o &rarr;</a>
+                <a href="#download-web" class="btn-action">Otevřít</a>
+            </div>
+        </div>
+        <div class="about-item">
+            <div class="about-text">
+                <h2>Desktopová s mobilní aplikace</h2>
+                <h3>Město v kapse</h3>
+                <p>Desktopová verze aplikace je ideální pro použití na vašem počítači či smartphonu a tabletu. Poskytuje všechny funkce webové verze s přidanou podporou pro offline režim.</p>
+                <ul class="custom-colored-list">
+                    <li>Offline režim</li>
+                    <li>Kompletní funkce</li>
+                    <li>Vyšší výkon</li>
+                </ul>
+                <a href="#more-info-desktop" class="btn-more">Více o &rarr;</a>
+                <a href="#download-desktop" class="btn-action">Stáhnout</a>
+            </div>
+            <img src="hero-banner.jpg" alt="Desktopová aplikace" class="about-img" style="margin-right: 0px; margin-left: 200px;">
+        </div>
+        <div class="about-item">
+            <img src="hero-banner.jpg" alt="Admin Panel" class="about-img">
+            <div class="about-text">
+                <h2>Admin Panel</h2>
+                <h3>Město v kapse</h3>
+                <p>Admin panel umožňuje spravovat města, místa a další data. Nabízí pokročilé funkce pro administraci a přizpůsobení aplikace vašim potřebám.</p>
+                <ul class="custom-colored-list">
+                    <li>Pokročilá správa</li>
+                    <li>Úpravy a přizpůsobení</li>
+                    <li>Statistiky a analýzy</li>
+                </ul>
+                <a href="#more-info-admin" class="btn-more">Více o &rarr;</a>
+                <a href="#download-admin" class="btn-action">Otevřít</a>
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <p>&copy; 2024 Václav Pisinger. | <a href="terms.html">Podmínky používání</a> | <a href="https://vaclavpi.github.io/">Kontakt</a></p>
-</footer>
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>Funkce aplikace</h2>
+        <p>Staňte se mistry v objevování měst, díky možnostem, které naše aplikace nabízí.</p>
+        <div class="features-container">
+            <div class="features-wrapper">
+              <div class="feature">
+                <div class="feature-img-wrapper">
+                  <img src="hero-banner.jpg" alt="Funkce 1">
+                </div>
+                <div class="feature-overlay">
+                  <h3>Funkce 1</h3>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-img-wrapper">
+                  <img src="hero-banner.jpg" alt="Funkce 1">
+                </div>
+                <div class="feature-overlay">
+                  <h3>Funkce 1</h3>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-img-wrapper">
+                  <img src="hero-banner.jpg" alt="Funkce 1">
+                </div>
+                <div class="feature-overlay">
+                  <h3>Funkce 1</h3>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-img-wrapper">
+                  <img src="hero-banner.jpg" alt="Funkce 1">
+                </div>
+                <div class="feature-overlay">
+                  <h3>Funkce 1</h3>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-img-wrapper">
+                  <img src="hero-banner.jpg" alt="Funkce 1">
+                </div>
+                <div class="feature-overlay">
+                  <h3>Funkce 1</h3>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-img-wrapper">
+                  <img src="hero-banner.jpg" alt="Funkce 1">
+                </div>
+                <div class="feature-overlay">
+                  <h3>Funkce 1</h3>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-img-wrapper">
+                  <img src="hero-banner.jpg" alt="Funkce 1">
+                </div>
+                <div class="feature-overlay">
+                  <h3>Funkce 1</h3>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-img-wrapper">
+                  <img src="hero-banner.jpg" alt="Funkce 1">
+                </div>
+                <div class="feature-overlay">
+                  <h3>Funkce 1</h3>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-img-wrapper">
+                  <img src="hero-banner.jpg" alt="Funkce 1">
+                </div>
+                <div class="feature-overlay">
+                  <h3>Funkce 1</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="indicators">
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <!-- Další indikátory -->
+          </div>
+          <a href="#features-info" class="info-button">Informace o funkcích</a>
+        </section>
+
+    <!-- Usage Section -->
+    <section class="about" id="pricing">
+        <div class="about-item">
+            <div class="about-text">
+                <h3 style="margin-bottom: 0%; margin-top: 25px;">Začněte využívat naše služby.</h3>
+                <h2 style="margin-top: -20px; margin-bottom: 30px;">Je to snadné!</h2>
+                <p>A jakže to funguje?</p>
+                <ul class="custom-colored-list">
+                    <li>Prozkoumejte náš ceník služeb níže.</li>
+                    <li>Vyberte si balíček, který vám nejlépe vyhovuje.</li>
+                    <li>My Vám zařídíme zkušební provoz zdarma a pak uvidíme.</li>
+                    <li>Máte-li jakékoli dotazy, neváhejte nás kontaktovat na <a href="mailto:vpi@skaut.cz" style="color: #4da3ee; text-decoration: none;">vpi@outlook.cz</a>.</li>
+                </ul>
+                <a href="#pricing-list" class="btn-action">Mám zájem!</a>
+            </div>
+            <img src="hero-banner.jpg" alt="Desktopová aplikace" class="about-img" style="margin-right: 0px; margin-left: 200px;">
+        </div>
+    </section>
+
+
+
+    <!-- Pricing Section -->
+    <section id="pricing-list">
+        <h2>
+            <span class="text-style1">Porovnání balíčků</span>
+            <span class="text-style2">Města v kapse</span>
+        </h2>
+        <p class="pricing-description">Výčet dostupných modulů se liší podle zakoupeného balíčku. Vše můžete nezávazně vyzkoušet zdarma a rozhodnout se později.</p>
+        <div class="pricing-table">
+            <div class="pricing-item">
+                <h3>Basic Start</h3>
+                <p class="price">9 990 Kč/rok</p>
+                <a href="mailto:vpi@outlook.cz?subject=Objednávka Basic Start&body=Zájem o balíček Basic Start. Prosím o zaslání detailů a instrukcí k objednávce." class="btn-order">Vyzkoušet zdarma</a>
+            
+                <ul>
+                    <li><span class="checkmark">&#10003;</span> Až 10 míst</li>
+                    <li><span class="checkmark">&#10003;</span> Základní funkce</li>
+                    <li><span class="checkmark">&#10003;</span> Základní editace databáze</li>
+                    <li><span class="checkmark">&#10003;</span> E-mailová podpora</li>
+                    <li><span class="checkmark">&#10003;</span> 14denní zkušební doba zdarma</li>
+                </ul>
+            </div>
+            <div class="pricing-item">
+                <h3>Pro Plus</h3>
+                <p class="price">19 990 Kč/rok</p>
+                <a href="mailto:vpi@outlook.cz?subject=Objednávka Pro Plus&body=Zájem o balíček Pro Plus. Prosím o zaslání detailů a instrukcí ke zkušební době zdarma." class="btn-order">Vyzkoušet zdarma</a>
+            
+                <ul>
+                    <li><span class="checkmark">&#10003;</span> Až 30 míst</li>
+                    <li><span class="checkmark">&#10003;</span> Pokročilé funkce</li>
+                    <li><span class="checkmark">&#10003;</span> Základní editace databáze</li>
+                    <li><span class="checkmark">&#10003;</span> Prioritní e-mailová podpora</li>
+                    <li><span class="checkmark">&#10003;</span> Možnost přizpůsobení funkcí</li>
+                    <li><span class="checkmark">&#10003;</span> 14denní zkušební doba zdarma</li>
+                </ul>
+                 </div>
+            <div class="pricing-item">
+                <h3>Enterprise</h3>
+                <p class="price">39 990 Kč/rok</p>
+                <a href="mailto:vpi@outlook.cz?subject=Objednávka Enterprise&body=Zájem o balíček Enterprise. Prosím o zaslání detailů a instrukcí zkušební době zdarma.." class="btn-order">Vyzkoušet zdarma</a>
+            
+                <ul>
+                    <li><span class="checkmark">&#10003;</span> Neomezený počet měst</li>
+                    <li><span class="checkmark">&#10003;</span> Všechny funkce</li>
+                    <li><span class="checkmark">&#10003;</span> Pokročilá editace databáze</li>
+                    <li><span class="checkmark">&#10003;</span> Osobní podpora</li>
+                    <li><span class="checkmark">&#10003;</span> Pokročilé přizpůsobení</li>
+                    <li><span class="checkmark">&#10003;</span> 30denní zkušební doba zdarma</li>
+                </ul>
+                </div>
+            <div class="pricing-item">
+                <h3>Custom Solution</h3>
+                <p class="price">Cena na míru/rok</p>
+                <a href="mailto:vpi@outlook.c?subject=Žádost o Custom Solution&body=Zájem o vlastní uživatelskou aplikaci. Prosím o zaslání detailů a možností k domluvení schůzky." class="btn-order">Poptat</a>
+            
+                <ul>
+                    <li><span class="checkmark">&#10003;</span> Možnost vlastní uživatelské aplikace (na míru)</li>
+                    <li><span class="checkmark">&#10003;</span> Komplexní integrace a přizpůsobení</li>
+                    <li><span class="checkmark">&#10003;</span> 30denní zkušební doba zdarma</li>
+                    <li><span class="checkmark">&#10003;</span> Osobní konzultace a podpora</li>
+                </ul>
+                </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- News Section -->
+    <section class="news" id="news">
+        <h2>Aktuální témata</h2>
+        <h3>Abyste tušili, co jsme udělali a co plánujeme.</h3>
+        <div class="news-container">
+            <div class="news-item">
+                <img src="hero-banner.jpg" alt="Novinka 1">
+                <p class="news-date">1. září 2024</p>
+                <p class="news-description">Máme pro Vás úplně nový web.</p>
+                <span class="tag">Novinka</span>
+                <span class="tag">Web</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <img src="logojmenospod.png" alt="Logo" />
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <!-- Sociální sítě -->
+                <div class="footer-social">
+                    <p>Sledujte nás:</p>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    
+                  
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <!-- Stažení aplikace -->
+                <div class="footer-download">
+                    <p>Stáhněte naši aplikaci:</p>
+                    <a href="https://play.google.com/store/apps" target="_blank" aria-label="Google Play">
+                        <i class="fab fa-google-play"></i>
+                       
+                    </a>
+                    <a href="https://apps.apple.com" target="_blank" aria-label="App Store">
+                        <i class="fab fa-app-store-ios"></i>
+                     
+                    </a>
+                    <a href="https://apps.microsoft.com/" target="_blank" aria-label="Microsoft Store">
+                        <i class="fa-brands fa-microsoft"></i>
+                        
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <!-- Tlačítko nahoru -->
+                <div class="footer-back-to-top">
+                    <a href="#top" aria-label="Zpět na začátek">
+                        <i class="fas fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <p>&copy; 2024 Václav Pisinger.</p>
+        </div>
+    </footer>
+
+
 
 <script>
-    function togglePricingPanel() {
-        var panel = document.getElementById('pricingPanel');
-        panel.classList.toggle('active');
-    }
-</script>
+document.addEventListener('DOMContentLoaded', function() {
+  const wrapper = document.querySelector('.features-wrapper');
+  const indicators = document.querySelectorAll('.indicator');
+  
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
 
+  function updateIndicators() {
+    const wrapperWidth = wrapper.clientWidth;
+    const scrollLeft = wrapper.scrollLeft;
+    const index = Math.round(scrollLeft / wrapperWidth);
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('active', i === index);
+    });
+  }
+
+  wrapper.addEventListener('scroll', updateIndicators);
+  updateIndicators(); // Initialize indicators on page load
+
+  // Optional: Add click event to indicators for smooth scrolling
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      wrapper.scrollTo({
+        left: wrapper.clientWidth * index,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Implement horizontal scrolling via mouse drag
+  wrapper.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - wrapper.offsetLeft;
+    scrollLeft = wrapper.scrollLeft;
+  });
+
+  wrapper.addEventListener('mouseleave', () => {
+    isDragging = false;
+  });
+
+  wrapper.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+
+  wrapper.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - wrapper.offsetLeft;
+    const walk = (x - startX) * 2; // Scroll rychlost (změňte, pokud je potřeba)
+    wrapper.scrollLeft = scrollLeft - walk;
+  });
+});
+
+    </script>
 </body>
+
+
 </html>

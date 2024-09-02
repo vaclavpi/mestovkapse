@@ -1,0 +1,695 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    color: #4da3ee;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 0;
+    width: 98%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    font-size: 1rem;
+}
+
+.nav-links a {
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #4da3ee;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-admin {
+    background-color: #4da3ee;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-admin:hover {background-color: #3390d6; /* Tmavší modrá pro hover efekt */
+    text-decoration: none;}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 300px;
+}
+
+.hero-content {
+    max-width: 50%;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #4da3ee;
+    margin: 0;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    color: #333;
+    margin-top: -25px;
+}
+
+.hero-content p {
+    font-size: 1.7rem;
+    margin-top: -25px;
+}
+
+.btn-main {
+    background-color: #4da3ee;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Statistics Section */
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background: rgba(51, 143, 214, 0.151);
+
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-icon {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.stat-icon i{
+    color: #4da3ee;
+    font-size: 2rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    color: #4da3ee;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.stat-description {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 400px;
+
+}
+
+/* About Section */
+.about {
+    padding: 100px 100px;
+    background-color: #f9f9f9;
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.about-img {
+    width: 40%;
+    margin-right: 200px;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #4da3ee;
+    margin: 0;
+    font-weight: bold;
+}
+
+.about-text h3 {
+    font-size: 2.3rem;
+    color: #333;
+    margin-top: -15px;
+    font-weight:lighter ;
+}
+
+.about-text p {
+    font-size: 1.3rem;
+    margin-top: -15px;
+    max-width: 70%;
+}
+
+.about-text ul {
+    list-style:none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.custom-colored-list {
+    list-style-type: none; /* Odstraní standardní odrážky */
+    padding-left: 20px; /* Přidá odsazení pro vlastní odrážky */
+  }
+  
+  .custom-colored-list li {
+    position: relative; /* Nutné pro správné umístění pseudo-elementu */
+    padding-left: 30px; /* Vytvoří místo pro odrážky */
+    margin-bottom: 15px; /* Mezery mezi položkami */
+  }
+  
+  .custom-colored-list li::before {
+    content: '•'; /* Použití znaku odrážky */
+    position: absolute;
+    left: 0;
+    color: #4da3ee; /* Barva odrážky */
+    font-size: 2em; /* Velikost odrážky */
+    line-height: 0.8; /* Výška řádku pro zarovnání */
+  }
+
+.about-text ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+.btn-action {
+    margin-left: 10px;
+    background-color: #4da3ee;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn-more {
+    font-size: 1rem;
+    background-color: #4da3ee;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.btn-action:hover{background-color: #3390d6; /* Tmavší modrá pro hover efekt */
+    text-decoration: none;}
+
+    .btn-more:hover:hover{background-color: #3390d6; /* Tmavší modrá pro hover efekt */
+        text-decoration: none;}
+
+/* Usage Section */
+.usage {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.usage h2 {
+    font-size: 2rem;
+    color: #4da3ee;
+    margin: 0;
+}
+
+.usage p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.btn-more {
+    background-color: #4da3ee;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 20px;
+    background: rgba(51, 143, 214, 0.151);
+
+  }
+  
+  .features h2 {
+    color: #4da3ee; /* Modrá barva */
+    font-size: 3em;
+  }
+  
+  .features p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-top: -50px;
+  }
+  
+  .features-container {
+    display: flex;
+    overflow: hidden; /* Skrýt scroll bar */
+    padding: 25px 50px; /* Přidat prostor kolem obsahu */
+    position: relative; /* Pozicování pro indikátory */
+  }
+  
+  .features-wrapper {
+    display: flex;
+    overflow: hidden; /* Povolit horizontální scrollování */
+    -webkit-overflow-scrolling: touch; /* Plynulé scrollování na dotykových zařízeních */
+    scroll-snap-type: x mandatory; /* Umožňuje plynulé přeskakování mezi položkami */
+    padding-bottom: 20px; /* Prostor na dolní část pro indikátory */
+    scroll-behavior: smooth; /* Plynulé scrollování */
+  }
+  
+  .features-container::-webkit-scrollbar {
+    display: none; /* Pro Webkit prohlížeče (Chrome, Safari) */
+  }
+  
+  
+
+  .feature {
+    flex: 0 0 auto; /* Zabraňuje zmenšení nebo roztáhnutí */
+    width: 300px; /* Šířka každé funkce */
+    margin-right: 20px; /* Mezery mezi funkcemi */
+    position: relative;
+    scroll-snap-align: start; /* Zarovnání na začátek při scrollování */
+    overflow: hidden;
+  }
+  
+  .feature-img-wrapper {
+    position: relative;
+    border-radius: 15px; /* Zaoblení rohů obrázku */
+    overflow: hidden;
+  }
+  
+  .feature-img-wrapper img {
+    width: 100%; /* Šířka obrázku */
+    height: auto; /* Zachování proporcí obrázku */
+    display: block;
+  }
+  
+  .feature-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    bottom: -5%;
+    transform: translateX(-50%);
+    width: 80%;
+    /*Šířkapřekrytí*/background: rgba(255, 255, 255, 0.8);
+    /*Bílýsprůhledností*/border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+  
+  .feature-overlay h3 {
+    color: #4da3ee; /* Modrá barva */
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+
+  
+  
+  .info-button {
+    margin-left: 10px;
+    background-color: #4da3ee;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .info-button:hover {
+    background-color: #3390d6; /* Tmavší modrá pro hover efekt */
+    text-decoration: none;
+  }
+  
+  .indicators {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb; /* Světle šedá barva pro neaktivní tečky */
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .indicator.active {
+    background-color: #4da3ee; /* Modrá barva pro aktivní tečku */
+  }
+  
+
+/* Pricing Section */
+
+    #pricing-list {
+        padding: 40px 20px;
+        background-color: #f9f9f9;
+        background: rgba(51, 143, 214, 0.151);
+
+    }
+    
+
+    #pricing-list h2 {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+        text-decoration: none;
+        justify-content: center; /* Horizontální centrování textu */
+    }
+    .text-style1 {
+        font-size: 2em;
+        color: #4da3ee;
+      
+        text-align: center;
+    }
+    
+    .text-style2 {
+        font-size: 2em;
+        color: #333;
+        text-align: center;
+        margin-left: 20px;
+    }
+    .pricing-description {
+        text-align: center;
+    
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 30px;
+    
+    }
+    
+    .pricing-table {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .pricing-item {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .pricing-item h3 {
+        font-size: 1.8em;
+        color: #4da3ee;
+        margin-bottom: 10px;
+    }
+    
+    .pricing-item .price {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 15px;
+    }
+    
+    .pricing-item ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.1em;
+        color: #555;
+    }
+    
+    .pricing-item ul li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 40px; /* Adjust this value if needed to align with checkmarks */
+        text-align: left;
+    }
+    
+    .checkmark {
+        color: #4da3ee;
+        font-size: 1.2em;
+        position: absolute;
+        left: 10px; /* Adjust this value to position the checkmark */
+        top: 50%;
+        transform: translateY(-50%); /* Center checkmark vertically */
+    }
+    
+    .btn-order {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        background-color: #4da3ee;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+    
+    .btn-order:hover {
+        background-color: #3390d6;
+    }
+    
+
+/* News Section */
+.news {
+    padding: 100px 100px;
+    background-color: #f9f9f9;
+}
+
+.news h2 {
+    font-size: 2.5rem;
+    color: #4da3ee;
+    margin: 0;
+    font-weight: bold;
+}
+
+.news h3 {
+    font-size: 2.3rem;
+    color: #333;
+    margin-top: -15px;
+    font-weight:lighter ;
+}
+
+
+.news-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.news-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin-right: 20px;
+    
+}
+
+.news-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.news-description {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.tag {
+    background-color: #4da3ee93;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 500px;
+    display: inline-block;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    -ms-border-radius: 500px;
+    -o-border-radius: 500px;
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    background: rgba(51, 143, 214, 0.151);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+    font-size: 35px;
+    box-sizing: border-box;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-social p,
+.footer-download p {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 10px 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons li {
+    margin: 10px 10px;
+}
+
+.social-icons i {
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+
+
+.footer-download a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.footer-download img {
+    max-width: 100px;
+}
+
+
+
+.footer-copyright {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        flex: 1 0 100%;
+        text-align: center;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+
+    .footer-download a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer-download img {
+        max-width: 100px;
+    }
+
+    .social-icons i {
+        font-size: 20px;
+    }
+}
+
