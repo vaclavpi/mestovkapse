@@ -7,24 +7,30 @@
     <meta name="keywords" content="guiding aplikace, města, ČR, mobilní aplikace, administrace">
     <meta name="author" content="Město v kapse">
     <title>Město v kapse</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="assets/logos/logo.png">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="logojmeno.png" alt="Logo Město v kapse">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#about">O aplikaci</a></li>
-            <li><a href="#features">Funkce</a></li>
-            <li><a href="#pricing">Ceník</a></li>
-            <li><a href="#news">Novinky</a></li>
-        </ul>
-        <a href="#admin-panel" class="btn-admin">Admin Panel</a>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/logos/logojmeno.png" alt="Logo">
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Domů</a></li>
+                <li><a href="#">O nás</a></li>
+                <li><a href="#">Služby</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+            <a href="#" class="btn-admin">Admin Panel</a>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -32,7 +38,7 @@
             <h1>Objevování měst</h1>
             <h2>bez námahy</h2>
             <p>Rychlé, snadné a přehledné informace o českých městech na dosah vašeho zařízení.</p>
-            <a href="#features" class="btn-main">Vstoupit</a>
+            <a href="#about" class="btn-main">Zjistit víc</a>
         </div>
     </section>
 
@@ -64,7 +70,7 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about-item">
-            <img src="hero-banner.jpg" alt="Webová aplikace" class="about-img">
+            <img src="assets/images/hero-banner.jpg" alt="Webová aplikace" class="about-img">
             <div class="about-text">
                 <h2>Webová aplikace</h2>
                 <h3>Město v kapse</h3>
@@ -91,10 +97,10 @@
                 <a href="#more-info-desktop" class="btn-more">Více o &rarr;</a>
                 <a href="#download-desktop" class="btn-action">Stáhnout</a>
             </div>
-            <img src="hero-banner.jpg" alt="Desktopová aplikace" class="about-img" style="margin-right: 0px; margin-left: 200px;">
+            <img src="assets/images/hero-banner.jpg" alt="Desktopová aplikace" class="about-imgM">
         </div>
         <div class="about-item">
-            <img src="hero-banner.jpg" alt="Admin Panel" class="about-img">
+            <img src="assets/images/hero-banner.jpg" alt="Admin Panel" class="about-img">
             <div class="about-text">
                 <h2>Admin Panel</h2>
                 <h3>Město v kapse</h3>
@@ -118,7 +124,7 @@
             <div class="features-wrapper">
               <div class="feature">
                 <div class="feature-img-wrapper">
-                  <img src="hero-banner.jpg" alt="Funkce 1">
+                  <img src="assets/images/hero-banner.jpg" alt="Funkce 1">
                 </div>
                 <div class="feature-overlay">
                   <h3>Funkce 1</h3>
@@ -126,7 +132,7 @@
               </div>
               <div class="feature">
                 <div class="feature-img-wrapper">
-                  <img src="hero-banner.jpg" alt="Funkce 1">
+                  <img src="assets/images/hero-banner.jpg" alt="Funkce 1">
                 </div>
                 <div class="feature-overlay">
                   <h3>Funkce 1</h3>
@@ -134,7 +140,7 @@
               </div>
               <div class="feature">
                 <div class="feature-img-wrapper">
-                  <img src="hero-banner.jpg" alt="Funkce 1">
+                  <img src="assets/images/hero-banner.jpg" alt="Funkce 1">
                 </div>
                 <div class="feature-overlay">
                   <h3>Funkce 1</h3>
@@ -142,7 +148,7 @@
               </div>
               <div class="feature">
                 <div class="feature-img-wrapper">
-                  <img src="hero-banner.jpg" alt="Funkce 1">
+                  <img src="assets/images/hero-banner.jpg" alt="Funkce 1">
                 </div>
                 <div class="feature-overlay">
                   <h3>Funkce 1</h3>
@@ -150,7 +156,7 @@
               </div>
               <div class="feature">
                 <div class="feature-img-wrapper">
-                  <img src="hero-banner.jpg" alt="Funkce 1">
+                  <img src="assets/images/hero-banner.jpg" alt="Funkce 1">
                 </div>
                 <div class="feature-overlay">
                   <h3>Funkce 1</h3>
@@ -158,7 +164,7 @@
               </div>
               <div class="feature">
                 <div class="feature-img-wrapper">
-                  <img src="hero-banner.jpg" alt="Funkce 1">
+                  <img src="assets/images/hero-banner.jpg" alt="Funkce 1">
                 </div>
                 <div class="feature-overlay">
                   <h3>Funkce 1</h3>
@@ -166,7 +172,7 @@
               </div>
               <div class="feature">
                 <div class="feature-img-wrapper">
-                  <img src="hero-banner.jpg" alt="Funkce 1">
+                  <img src="assets/images/hero-banner.jpg" alt="Funkce 1">
                 </div>
                 <div class="feature-overlay">
                   <h3>Funkce 1</h3>
@@ -174,7 +180,7 @@
               </div>
               <div class="feature">
                 <div class="feature-img-wrapper">
-                  <img src="hero-banner.jpg" alt="Funkce 1">
+                  <img src="assets/images/hero-banner.jpg" alt="Funkce 1">
                 </div>
                 <div class="feature-overlay">
                   <h3>Funkce 1</h3>
@@ -182,7 +188,7 @@
               </div>
               <div class="feature">
                 <div class="feature-img-wrapper">
-                  <img src="hero-banner.jpg" alt="Funkce 1">
+                  <img src="assets/images/hero-banner.jpg" alt="Funkce 1">
                 </div>
                 <div class="feature-overlay">
                   <h3>Funkce 1</h3>
@@ -213,7 +219,7 @@
                 </ul>
                 <a href="#pricing-list" class="btn-action">Mám zájem!</a>
             </div>
-            <img src="hero-banner.jpg" alt="Desktopová aplikace" class="about-img" style="margin-right: 0px; margin-left: 200px;">
+            <img src="assets/images/hero-banner.jpg" alt="Desktopová aplikace" class="about-imgM">
         </div>
     </section>
 
@@ -291,7 +297,7 @@
         <h3>Abyste tušili, co jsme udělali a co plánujeme.</h3>
         <div class="news-container">
             <div class="news-item">
-                <img src="hero-banner.jpg" alt="Novinka 1">
+                <img src="assets/images/hero-banner.jpg" alt="Novinka 1">
                 <p class="news-date">1. září 2024</p>
                 <p class="news-description">Máme pro Vás úplně nový web.</p>
                 <span class="tag">Novinka</span>
@@ -307,7 +313,7 @@
             <div class="footer-column">
                 <!-- Logo -->
                 <div class="footer-logo">
-                    <img src="logojmenospod.png" alt="Logo" />
+                    <img src="assets/logos/logojmenospod.png" alt="Logo" />
                 </div>
             </div>
 
@@ -360,62 +366,9 @@
 
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const wrapper = document.querySelector('.features-wrapper');
-  const indicators = document.querySelectorAll('.indicator');
-  
-  let isDragging = false;
-  let startX;
-  let scrollLeft;
+<script src="assets/scripts/scriptscroll.js"></script>
 
-  function updateIndicators() {
-    const wrapperWidth = wrapper.clientWidth;
-    const scrollLeft = wrapper.scrollLeft;
-    const index = Math.round(scrollLeft / wrapperWidth);
-    indicators.forEach((indicator, i) => {
-      indicator.classList.toggle('active', i === index);
-    });
-  }
-
-  wrapper.addEventListener('scroll', updateIndicators);
-  updateIndicators(); // Initialize indicators on page load
-
-  // Optional: Add click event to indicators for smooth scrolling
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-      wrapper.scrollTo({
-        left: wrapper.clientWidth * index,
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  // Implement horizontal scrolling via mouse drag
-  wrapper.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.pageX - wrapper.offsetLeft;
-    scrollLeft = wrapper.scrollLeft;
-  });
-
-  wrapper.addEventListener('mouseleave', () => {
-    isDragging = false;
-  });
-
-  wrapper.addEventListener('mouseup', () => {
-    isDragging = false;
-  });
-
-  wrapper.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - wrapper.offsetLeft;
-    const walk = (x - startX) * 2; // Scroll rychlost (změňte, pokud je potřeba)
-    wrapper.scrollLeft = scrollLeft - walk;
-  });
-});
-
-    </script>
+<script src="assets/scripts/scriptmenu.js"></script>
 </body>
 
 

@@ -15,7 +15,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Navbar */
+/* General Styles for Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -24,13 +24,20 @@ a:hover {
     background: rgba(255, 255, 255, 0.8);
     position: fixed;
     top: 0;
-    width: 98%;
+    width: 98.5%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .navbar .logo img {
     height: 40px;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .nav-links {
@@ -57,18 +64,16 @@ a:hover {
 .btn-admin {
     background-color: #4da3ee;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    margin-right: 20px;
 }
-
-.btn-admin:hover {background-color: #3390d6; /* Tmavší modrá pro hover efekt */
-    text-decoration: none;}
 
 /* Hero Section */
 .hero {
-    background-image: url('hero-banner.jpg');
+    background-image: url('/assets/images/hero-banner.jpg');
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -98,6 +103,7 @@ a:hover {
 .hero-content p {
     font-size: 1.7rem;
     margin-top: -25px;
+    color: #333;
 }
 
 .btn-main {
@@ -111,6 +117,11 @@ a:hover {
     font-weight: bold;
     font-size: 1.5rem;
 }
+
+
+.btn-main:hover {background-color: #3390d6; /* Tmavší modrá pro hover efekt */
+    text-decoration: none;}
+
 
 /* Statistics Section */
 .statistics {
@@ -174,6 +185,11 @@ a:hover {
 .about-img {
     width: 40%;
     margin-right: 200px;
+    border-radius: 10px;
+}
+.about-imgM {
+    width: 40%;
+    margin-left: 200px;
     border-radius: 10px;
 }
 

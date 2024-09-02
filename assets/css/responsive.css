@@ -1,0 +1,263 @@
+/* Responsive design */
+@media (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Responsive design for Hero Section */
+@media (max-width: 767px) {
+    .hero {
+        padding: 0 20px;
+        height: 60vh;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .btn-main {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Responsive design for Statistics Section */
+@media (max-width: 767px) {
+    .statistics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-item {
+        margin-bottom: 30px;
+    }
+
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .stat-icon i {
+        font-size: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 1.2rem;
+    }
+
+    .stat-description {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
+
+/* Responsive design for About Section */
+@media (max-width: 767px) {
+    .about {
+        padding: 50px 20px;
+    }
+
+    .about-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-img {
+        width: 60%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .about-imgM {
+        width: 60%;
+        margin-left: 0;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .about-text {
+        margin-left: 0;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .about-text ul {
+        padding-left: 0;
+    }
+}
+
+/* Responsive design for Features Section */
+@media (max-width: 767px) {
+    .features-container {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .features-wrapper {
+        flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .feature {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .feature-overlay {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+    }
+
+    .info-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .feature-img-wrapper img {
+        width: 50%; /* Šířka obrázku */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+      }
+      
+}
+
+/* Responsive design for Pricing Section */
+@media (max-width: 767px) {
+    #pricing-list {
+        padding: 20px;
+    }
+
+    .pricing-table {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-item {
+        width: 60%;
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+
+    .pricing-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .pricing-item .price {
+        font-size: 1.2rem;
+    }
+
+    .pricing-item ul li {
+        font-size: 0.9rem;
+    }
+
+    .btn-order {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Responsive design for News Section */
+@media (max-width: 767px) {
+    .news {
+        padding: 50px 20px;
+    }
+
+    .news-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-item {
+        width: 60%;
+        max-width: 500px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive design for Footer */
+@media (max-width: 767px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+
+    .footer-download a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer-download img {
+        max-width: 80px;
+    }
+
+    .social-icons i {
+        font-size: 20px;
+    }
+}
