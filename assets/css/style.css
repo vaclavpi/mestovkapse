@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #333;
     line-height: 1.6;
 }
@@ -73,7 +73,7 @@ a:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url('/assets/images/hero-banner.jpg');
+    background-image: url('https://github.com/vaclavpi/mestovkapse/blob/34e3c61e18af783bf3440889dbf09c8d5a9fe7db/assets/images/hero-banner.jpg');
     background-size: cover;
     background-position: center;
     height: 80vh;
